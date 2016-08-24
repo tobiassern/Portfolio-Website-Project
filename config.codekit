@@ -154,17 +154,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/img\/teal-car.jpeg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3.84436e+06,
-		"inputAbbreviatedPath": "\/img\/teal-car.jpeg",
-		"outputAbbreviatedPath": "\/img\/teal-car.jpeg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 1
-		},
 	"\/img\/tobias-sernhede-profile.jpg": {
 		"fileType": 16384,
 		"ignore": 0,

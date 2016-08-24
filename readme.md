@@ -8,6 +8,8 @@ Download zip file and open index.html
 
 Simple Portfolio Website that is built as a one-pager.
 
+View website: https://tobiassernhede.github.io/Portfolio-Website-Project/
+
 ## History
 
 Built as a project for the Fullstack Nanodegree at Udacity.

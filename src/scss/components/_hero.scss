@@ -1,0 +1,80 @@
+.hero-area {
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+	position: relative;
+	margin-bottom: 25px;
+	background-image: url(../../img/mountains-767x511.jpg); // background image for all window sizes less than 960px
+	@media (min-width: $screen-lg-min) {
+		background-image: url(../../img/mountains-2000x1333.jpg); // background image for all window sizes larger than 2000px
+	}
+	@media (min-width: $screen-md-min) {
+		background-image: url(../../img/mountains-1200x800.jpg); // background image for all window sizes larger than 1200px
+	}
+	.hero-overlay {
+		background-image: linear-gradient(-134deg, rgba(180,236,81,0.25) 0%, #429321 100%);
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		color: #ffffff;
+		padding-bottom: 200px;
+		@media (min-width: $screen-sm-min) {
+			padding-bottom: 150px;
+		}
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.hero-content {
+				padding: 50px 0;
+				.hero-social-icons {
+					height: 40px;
+					a {
+						color: inherit;
+						display: inline-block;
+						background-color: rgba(0,0,0,0.2);
+						margin: 5px;
+						width: 35px;
+						height: 35px;
+						line-height: 35px;
+						border-radius: 100%;
+						font-size: 22px;
+						transition: all $standard-transition;
+						&:hover {
+							background-color: rgba(0,0,0,0.1);
+						}
+					}
+				}
+			}
+		}
+	}
+	&:after {
+		content: '';
+		width: 100%;
+		background-size: 100% 100%;
+		position: absolute;
+		bottom: 0;
+		height: 75px;
+		transition: height $standard-transition;
+		// The svg is just for design, graceful fallback if not compatible
+		background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'><polygon points='0,100 100,100 100,0' style='fill:#ffffff;' /></svg>");
+		@media (min-width: $screen-sm-min) {
+			height: 150px;
+		}
+	}
+	.hero-profile-image {
+		border-radius: 100%;
+		position: absolute;
+		z-index: 60;
+		margin-left: -75px;
+    	left: 50%;
+		width: 150px;
+		height: 150px;
+    	bottom: 50px;
+    	border: 4px solid #ffffff;
+    	transition: all $standard-transition;
+    	@media (min-width: $screen-sm-min) {
+    		bottom: 0;
+    	}
+	}
+}

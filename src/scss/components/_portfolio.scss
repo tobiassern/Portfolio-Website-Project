@@ -1,0 +1,117 @@
+/* Portfolio */
+.portfolio-items {
+	.portfolio-view-more {
+		cursor: pointer;
+	}
+	margin-bottom: 75px;
+	.portfolio-item {
+		background-color: #ffffff;
+		text-align: center;
+		margin-bottom: 25px;
+		transition: all $standard-transition;
+		width: 100%;
+		p {
+			display: none;
+		}
+	}
+}
+
+body.portfolio-item-loaded {
+	overflow: hidden;
+	#portfolio-loaded-overlay-wrap {
+		opacity: 1;
+		pointer-events: all;
+		transition: opacity ease-out 0.4s;
+		#portfolio-overlay-inner {
+			& #portfolio-overlay-image-wrap {
+				transition: transform 0.4s ease-out;
+				transform: translateY(0);
+			}
+			& #portfolio-overlay-content-wrap {
+				transition: transform 0.4s ease-out;
+				transform: translateY(0);
+			}
+		}
+	}
+}
+
+#portfolio-loaded-overlay-wrap {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1500;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity $standard-transition 0.4s;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	display: flex;
+	#portfolio-loaded-overlay {
+		background-color: rgba(0,0,0,0.8);
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		z-index: 1600;
+		top: 0;
+		left: 0;
+	}
+	.fa.fa-times {
+		position: fixed;
+		top: 15px;
+		right: 15px;
+		color: #ffffff;
+		cursor: pointer;
+		font-size: 1.8em;
+		z-index: 3000;
+	}
+	#portfolio-overlay-inner {
+		margin: auto; // horizontal and vertical align
+		pointer-events: none;
+		padding: 0;
+		z-index: 2000;
+		& #portfolio-overlay-content-wrap {
+			pointer-events: all;
+			background-color: #ffffff;
+			transform: translateY(calc(100vh + 37.5px));
+			transition: transform 0.3s ease-in;
+			padding: 1px 0 15px 0;
+			@media (min-width: $screen-md-min) {
+				transform: translateY(calc(100vh + 75px));
+			}
+			& h3, p {
+				padding: 0 15px;
+				@media (min-width: $screen-md-min) {
+					padding: 0 75px;
+				}
+			}
+			&:before {
+				content: '';
+				width: 100%;
+				background-size: 100% 100%;
+				position: absolute;
+				top: -37.5px;
+				left: 0;
+				height: 37.5px;
+				transition: height $standard-transition;
+				// The svg is just for design, graceful fallback if not compatible
+				background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'><polygon points='0,100 100,100 100,0' style='fill:#ffffff;' /></svg>");
+				@media (min-width: $screen-sm-min) {
+					height: 75px;
+					top: -75px;
+				}
+			}
+		}
+		& #portfolio-overlay-image-wrap {
+			pointer-events: all;
+			position: relative;
+			transform: translateY(-100vh);
+			transition: transform .3s ease-in;
+			img {
+				display: block;
+			}
+
+		}
+	}
+}

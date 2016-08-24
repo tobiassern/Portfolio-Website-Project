@@ -1,0 +1,117 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Tobias Sernhede's Portfolio Site</title>
+        <meta name="description" content="Tobias Sernhede's personal portfolio site, a project built for the Udacity Full Stack Nanodegree.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="dist/css/style.css">
+    </head>
+    <body>
+        <header id="site-header">
+            <div class="header-logo">Tobias Sernhede</div>
+        </header>
+        <section class="hero-area">
+            <!-- The overlay is used for creating the gradient overlay over the hero image -->
+            <div class="hero-overlay">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Portfolio Website</h1>
+                        <h2 class="subheading"><small>By Tobias Sernhede</small></h2>
+                        <div class="hero-social-icons">
+                            <!-- Social icons loaded via font awesome cdn -->
+                            <a href="https://github.com/tobiassernhede" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/tobiassernhede/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/tobias.sernhede" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  Not using srcset as this img is always 150x150 px -->
+            <img src="img/tobias-sernhede-profile.jpg" class="hero-profile-image">
+        </section>
+        <section class="intro-text container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <p>Welcome to my portfolio, here you will find all my passion projects I am currently working on or have been working on.</p>
+                    <a href="mailto:tobias@sernhede.com?subject=Hello Tobias!" class="btn">Say Hello</a>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-items container">
+            <h2>My Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <article class="portfolio-item">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="img/teal-car-367x245.jpg">
+                            <source media="(min-width: 960px)" srcset="img/teal-car-300x200.jpg">
+                            <img src="img/teal-car-720x480.jpg" alt="Teal Car">
+                        </picture>
+                        <h3>Recondition old cars</h3>
+                        <!--  Description not visibile in this location, just for holding information and loaded via jQuery -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <!--  Using jQuery for detecting click on button.portfolio-view-more -->
+                        <button class="btn portfolio-view-more">View Project</button>
+                    </article>
+                </div>
+                <div class="col-md-4">
+
+                    <article class="portfolio-item">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="img/old-car-367x245.jpg">
+                            <source media="(min-width: 960px)" srcset="img/old-car-300x200.jpg">
+                            <img src="img/old-car-720x480.jpg" alt="Old Car">
+                        </picture>
+                        <h3>My favorite car</h3>
+                        <!--  Description not visibile in this location, just for holding information and loaded via jQuery -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <!--  Using jQuery for detecting click on button.portfolio-view-more -->
+                        <button class="btn portfolio-view-more">View Project</button>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="portfolio-item">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="img/dog-fashion-367x245.jpg">
+                            <source media="(min-width: 960px)" srcset="img/dog-fashion-300x200.jpg">
+                            <img src="img/dog-fashion-720x480.jpg" alt="Dog Fashion">
+                        </picture>
+                        <h3>Dog Fashion</h3>
+                        <!--  Description not visibile in this location, just for holding information and loaded via jQuery -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <!--  Using jQuery for detecting click on button.portfolio-view-more -->
+                        <button class="btn portfolio-view-more">View Project</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <footer id="site-footer">
+            <div class="container text-right">
+                <p><small>A project for Full Stack Nanodegree at Udacity | Copyright 2016 Tobias Sernhede</small></p>
+            </div>
+        </footer>
+        <!--  Placeholder for loading portfolio items -->
+        <div id="portfolio-loaded-overlay-wrap">
+            <i class="fa fa-times close-portfolio-overlay" aria-hidden="true"></i>
+            <div id="portfolio-overlay-inner" class="col-md-6 col-md-offset-3">
+                <div id="portfolio-overlay-image-wrap">
+                    <!-- img src is loaded into this placeholder img tag -->
+                    <!-- <img src="" id="portfolio-overlay-image"> -->
+                </div>
+                <div id="portfolio-overlay-content-wrap">
+                    <!-- The title is loaded in this h2 tag -->
+                    <div id="portfolio-overlay-title-wrap"></div>
+                    <!-- The content is loaded in this p tag -->
+                    <div id="portfolio-overlay-desc-wrap"></div>
+                </div>
+            </div>
+            <div id="portfolio-loaded-overlay" class="close-portfolio-overlay"></div>
+        </div>
+        <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="dist/js/app-min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    </body>
+</html>

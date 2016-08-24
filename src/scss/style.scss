@@ -1,0 +1,17 @@
+/* Compiled from scss files
+/* Only import the grid from bootstrap to keep the codebase minimal
+/* Also include normalize and print
+/* The css code created for this project is below the Bootstrap Code
+/* Search for "Style code for Portfolio Website" in this file to find it
+*/
+@import "bootstrap-grid/bootstrap-grid";
+
+
+/* STYLE CODE FOR PORTFOLIO WEBSITE
+/* This is the specific css code for the portfolio website
+*/
+/* Make sure variables file is loaded first */
+@import "components/variables";
+
+/* Import all scss files from components folder */
+@import "components/*";

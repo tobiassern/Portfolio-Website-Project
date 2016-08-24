@@ -1,0 +1,15 @@
+.btn {
+	text-decoration: none;
+	color: inherit;
+	padding: 6px 14px;
+	display: inline-block;
+	background-color: transparent;
+	border: 2px solid black;
+	font-family: $primary-font;
+	outline: none;
+	transition: all $standard-transition;
+	&:hover {
+		background-color: #000000;
+		color: #ffffff;
+	}
+}

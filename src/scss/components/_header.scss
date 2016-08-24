@@ -1,0 +1,17 @@
+/* Header */
+header#site-header {
+	background: linear-gradient(to bottom, rgba(0,0,0,0.37) 0%, transparent 100%);
+	z-index: 50;
+	position: absolute;
+	width: 100%;
+	padding: 10px;
+	color: #ffffff;
+	.header-logo {
+		height: 40px;
+		text-indent: -100%;
+		background-image: url(../../img/ts-logo.png);
+		background-image: url(../../img/ts-logo.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+}

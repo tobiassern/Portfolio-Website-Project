@@ -4,12 +4,13 @@
 	background-repeat: no-repeat;
 	position: relative;
 	margin-bottom: 25px;
+	transition: background 0.2s linear;
 	background-image: url(../../img/mountains-767x511.jpg); // background image for all window sizes less than 960px
-	@media (min-width: $screen-lg-min) {
-		background-image: url(../../img/mountains-2000x1333.jpg); // background image for all window sizes larger than 2000px
-	}
 	@media (min-width: $screen-md-min) {
 		background-image: url(../../img/mountains-1200x800.jpg); // background image for all window sizes larger than 1200px
+	}
+	@media (min-width: $screen-lg-min) {
+		background-image: url(../../img/mountains-2000x1333.jpg); // background image for all window sizes larger than 2000px
 	}
 	.hero-overlay {
 		background-image: linear-gradient(-134deg, rgba(180,236,81,0.25) 0%, #429321 100%);

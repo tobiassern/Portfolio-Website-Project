@@ -18,7 +18,9 @@
 
 body.portfolio-item-loaded {
 	overflow: hidden;
+	left: 0;
 	#portfolio-loaded-overlay-wrap {
+		left: 0;
 		opacity: 1;
 		pointer-events: all;
 		transition: opacity ease-out 0.4s;
@@ -40,7 +42,7 @@ body.portfolio-item-loaded {
 	height: 100%;
 	position: fixed;
 	top: 0;
-	left: 0;
+	left: -100%;
 	z-index: 1500;
 	opacity: 0;
 	pointer-events: none;
@@ -49,6 +51,7 @@ body.portfolio-item-loaded {
 	-webkit-overflow-scrolling: touch;
 	display: flex;
 	#portfolio-loaded-overlay {
+		left: -100%;
 		background-color: rgba(0,0,0,0.8);
 		position: fixed;
 		width: 100%;

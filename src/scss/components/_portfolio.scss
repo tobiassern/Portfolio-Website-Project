@@ -18,19 +18,21 @@
 
 body.portfolio-item-loaded {
 	overflow: hidden;
-	left: 0;
 	#portfolio-loaded-overlay-wrap {
-		left: 0;
+		top: 0;
 		opacity: 1;
 		pointer-events: all;
-		transition: opacity ease-out 0.4s;
+		transition: opacity $standard-transition 0.4s, top 0.0s linear 0.0s;
+		#portfolio-loaded-overlay {
+			transition: opacity ease-out 0.4s;
+		}
 		#portfolio-overlay-inner {
 			& #portfolio-overlay-image-wrap {
-				transition: transform 0.4s ease-out;
+				transition: transform 0.4s ease-out 0.4s;
 				transform: translateY(0);
 			}
 			& #portfolio-overlay-content-wrap {
-				transition: transform 0.4s ease-out;
+				transition: transform 0.4s ease-out 0.4s;
 				transform: translateY(0);
 			}
 		}
@@ -41,19 +43,18 @@ body.portfolio-item-loaded {
 	width: 100%;
 	height: 100%;
 	position: fixed;
-	top: 0;
-	left: -100%;
+	top: -100%;
+	left: 0;
 	z-index: 1500;
 	opacity: 0;
 	pointer-events: none;
-	transition: opacity $standard-transition 0.4s;
+	transition: opacity $standard-transition 0.4s, top 0.0s linear 0.4s;
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 	display: flex;
 	#portfolio-loaded-overlay {
-		left: -100%;
 		background-color: rgba(0,0,0,0.8);
-		position: fixed;
+		position: absolute;
 		width: 100%;
 		height: 100%;
 		z-index: 1600;
@@ -78,7 +79,7 @@ body.portfolio-item-loaded {
 			pointer-events: all;
 			background-color: #ffffff;
 			transform: translateY(calc(100vh + 37.5px));
-			transition: transform 0.3s ease-in;
+			transition: transform 0.4s ease-in;
 			padding: 1px 0 15px 0;
 			@media (min-width: $screen-md-min) {
 				transform: translateY(calc(100vh + 75px));
@@ -97,7 +98,6 @@ body.portfolio-item-loaded {
 				top: -37.5px;
 				left: 0;
 				height: 37.5px;
-				transition: height $standard-transition;
 				// The svg is just for design, graceful fallback if not compatible
 				background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'><polygon points='0,100 100,100 100,0' style='fill:#ffffff;' /></svg>");
 				@media (min-width: $screen-sm-min) {
@@ -110,7 +110,7 @@ body.portfolio-item-loaded {
 			pointer-events: all;
 			position: relative;
 			transform: translateY(-100vh);
-			transition: transform .3s ease-in;
+			transition: transform 0.4s ease-in;
 			img {
 				display: block;
 			}
